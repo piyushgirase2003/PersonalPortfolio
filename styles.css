@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0d0d0d;
+  color: #ffffff;
+}
+
+/* Container for the overall layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  height: fit-content;
+  width: 280px;
+  background: #ffffff;
+  color: #121212;
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  margin-top: 100px; /* Move the sidebar down */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar::before,
+.sidebar::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 3px dashed #ff6a00;
+  border-radius: 50%;
+}
+
+.sidebar::before {
+  top: -40px;
+  left: -40px;
+}
+
+.sidebar::after {
+  bottom: -40px;
+  left: -40px;
+}
+
+/* Profile styling */
+.profile {
+  text-align: center;
+  z-index: 1;
+}
+
+.profile-img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+}
+
+.profile h2 {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.tagline-icon {
+  background-color: white;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.75rem 0;
+  width: 30px;
+  height: 30px;
+}
+
+.profile p {
+  margin-top: -5px;
+  font-size: 0.85rem;
+  color: #555;
+  padding: 0 0.5rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.socials a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #ff6a00;
+}
+
+/* Main content */
+.content {
+  margin-left: 280px; /* Sidebar width */
+  padding: 2rem;
+  height: 100vh;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #ff9900;
+}
+
+.hero h1 span {
+  color: white;
+}
+
+.hero p {
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stats div {
+  background: #1f1f1f;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stats strong {
+  font-size: 1.5rem;
+  color: #00cc99;
+}
+
+/* Skills section */
+.skills {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.card {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Project and Tool Section Titles */
+.projects h2,
+.tools h2,
+.contact h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: #ffcc00;
+}
+
+.projects h2 span,
+.tools h2 span,
+.contact h2 span {
+  color: white;
+}
+
+/* Project Item styling */
+.project-item {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.project-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Tools Grid */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.tool-item {
+  background: #2a2a2a;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.tool-item:hover {
+  transform: scale(1.05);
+}
+
+/* Image for tool items */
+.tool-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact form styling */
+form {
+  display: grid;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+input, select, textarea, button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input, select, textarea {
+  background: #2a2a2a;
+  color: white;
+}
+
+button {
+  background: #ff9900;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e68a00;
+}
